@@ -3,20 +3,25 @@
     <div class="col-md-2">
       <!--Sidebar content-->
       
-      <div class="sort">
-        Search: <input ng-model="query"> </br>
-        Sort by:
-        <select ng-model="orderProp">
-          <option value="title" ng-click="predicate = title">Film Name</option>
-          <option value="rank" ng-click="predicate = rank">Film Rank</option>
-        </select>
+      <div class="sort outer">
+        <div class="inner2">
+          Search: <input ng-model="query"> </br>
+        
+          Sort by:
+          <select ng-model="orderProp">
+            <option value="title" ng-click="predicate = title">Film Name</option>
+            <option value="rank" ng-click="predicate = rank" selected>Film Rank</option>
+          </select>
+        </div>
       </div>
-      <form>
-        <input type="radio" name="order" ng-click="reverse=false"> Ascending
 
-        <input type="radio" name="order" ng-click="reverse=true"> Descending
-      </form>
+      <div class="inner2">
+        <form>
+          <input type="radio" name="order" ng-click="reverse=false" checked="checked"> Ascending
 
+          <input type="radio" name="order" ng-click="reverse=true"> Descending
+        </form>
+      </div>
     </div>
     <div class="col-md-10">
       <!--Body content-->

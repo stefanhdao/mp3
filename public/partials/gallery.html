@@ -1,0 +1,84 @@
+
+<div class="block" ng-model="genreProp">
+
+	<button class="genre" ng-click="predicate = all">
+      All
+  </button>
+  <button class="genre" ng-click="predicate = action">
+      Action
+  </button>
+  <button class="genre" ng-click="predicate = adventure">
+      Adventure
+  </button>
+  <button class="genre" ng-click="predicate = animation">
+      Animation
+  </button>
+  <button class="genre" ng-click="predicate = biography">
+      Biography
+  </button>
+  <button class="genre" ng-click="predicate = comedy">
+      Comedy
+  </button>
+  <button class="genre" ng-click="predicate = crime">
+      Crime
+  </button>
+  <button class="genre" ng-click="predicate = drama"> 
+      Drama
+  </button>
+  <button class="genre" ng-click="predicate = family">
+      Family
+  </button>
+  <button class="genre" ng-click="predicate = fantasy">
+      Fantasy
+  </button>
+  <button class="genre" ng-click="predicate = film-noir">
+      Film-Noir
+  </button>
+  <button class="genre" ng-click="predicate = history">
+      History
+  </button>
+  <button class="genre" ng-click="predicate = horro">
+      Horror
+  </button>
+  <button class="genre" ng-click="predicate = music">
+      Music
+  </button>
+  <button class="genre" ng-click="predicate = musical">
+      Musical
+  </button>
+  <button class="genre" ng-click="predicate = mystery">
+      Mystery
+  </button>
+  <button class="genre" ng-click="predicate = romance">
+      Romance
+  </button>
+  <button class="genre" ng-click="predicate = sci-fi">
+      Sci-Fi
+  </button>
+  <button class="genre" ng-click="predicate = sport">
+      Sport
+  </button>
+  <button class="genre" ng-click="predicate = thriller">
+      Thriller
+  </button>
+  <button class="genre" ng-click="predicate = war">
+      War
+  </button>
+  <button class="genre" ng-click="predicate = western">
+      Western
+  </button>
+
+	
+</div>
+<div> 
+	{{predicate}}
+</div>
+
+
+<div class="row small-up-1 medium-up-2 large-up-4">
+  <div class="column" ng-repeat="film in films | filter:genre:genreProp">
+  	<a href= "#details/{{film.rank}}">
+    	<img ng-src="data/images/{{film.imdbID}}.jpg" class="thumbnail" alt=""/>
+  	</a>
+  </div>
+</div>

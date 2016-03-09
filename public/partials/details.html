@@ -1,4 +1,19 @@
-<div class="row">
-	<p> Hello </p>
-
+<div class="detail-view">
+	<div class="buttons">
+		<a href="#details/{{film.rank-1}} "class="prev">
+      ◀ <span class="offscreen">Previous</span>
+    </a>
+    <a href="#details/{{film.rank+1}}" class="next">
+        <span class="offscreen">Next</span>  ▶
+    </a>
+	</div>
+	<div>
+	  <img class="film-image" ng-src="data/images/{{film.imdbID}}.jpg"/>
+	  <p>Title: {{film.title}} </p>
+	  <p>Rank: {{film.rank}}</p>
+	  <p>Released: {{film.plot}}</p>
+	  <p>Released: {{film.released}}</p>
+	  <p>Released: {{film.awards}}</p>
+	</div>
 </div>
+

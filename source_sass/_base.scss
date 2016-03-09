@@ -36,6 +36,18 @@ form input {
 	display:inline-block;
 }
 
+.genre {
+	display:inline-block;
+	background: blue;
+	color: white;
+	text-align: center;
+}
+
+.inner2{
+	width: 50%;
+    margin: 0 auto;
+}
+
 .film-container {
 	display: float;
 	border: 1px solid;

@@ -13,7 +13,7 @@ app.config(function ($routeProvider) {
 
 		})
 		.when('/gallery/', {
-			templateUrl: './partials/details.html',
+			templateUrl: './partials/gallery.html',
 			controller: 'galleryController'
 
 		})
