@@ -1,1 +1,64 @@
 // Add any custom Sass & CSS here
+
+
+body {
+  position: relative;
+  width: 100%;
+  border: 1px solid red;
+  display: block;
+}
+
+body > *  {
+  margin: auto;
+  border: 1px solid blue;
+  display: block;
+  overflow: auto;
+}
+
+body > script {
+  display: none
+}
+
+form input {
+	vertical-align: center;
+}
+
+.main {
+  text-align:center;
+  border: 1px solid green;
+}
+
+.block {
+    margin: 0 auto;
+}
+
+.inner {
+	display:inline-block;
+}
+
+.film-container {
+	display: float;
+	border: 1px solid;
+}
+
+/*
+.film-container:hover
+{
+  -webkit-transform: scale(1.1);     
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+*/
+
+
+.list {
+	list-style-type: none;
+}
+
+.film-image {
+	height: 100px;
+	width: 100px;
+	max-width: 100%;
+	max-height: 100%;
+	
+}

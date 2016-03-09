@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+      
+      <div class="sort">
+        Search: <input ng-model="query"> </br>
+        Sort by:
+        <select ng-model="orderProp">
+          <option value="title" ng-click="predicate = title">Film Name</option>
+          <option value="rank" ng-click="predicate = rank">Film Rank</option>
+        </select>
+      </div>
+      <form>
+        <input type="radio" name="order" ng-click="reverse=false"> Ascending
+
+        <input type="radio" name="order" ng-click="reverse=true"> Descending
+      </form>
+
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+
+      <ul class="list">
+        <li class="animate-repeat" ng-repeat="film in films | filter:query | orderBy:orderProp:reverse">
+          <div class="film-container" >
+            <a href= "#details/{{film.rank}}">
+              <img class="film-image" ng-src="data/images/{{film.imdbID}}.jpg"/>
+              <p>Title: {{film.title}} </p>
+              <p>Rank: {{film.rank}}</p>
+            </a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div> 
