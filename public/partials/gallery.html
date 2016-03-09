@@ -4,79 +4,78 @@
 	<button class="genre" ng-click="predicate = all">
       All
   </button>
-  <button class="genre" ng-click="predicate = action">
+
+  <button class="genre" ng-href='#gallery' ng-click="filterGenres('action')">
       Action
   </button>
-  <button class="genre" ng-click="predicate = adventure">
+
+  <button class="genre" ng-href='#gallery' ng-click="filterGenres('adventure')">
       Adventure
   </button>
-  <button class="genre" ng-click="predicate = animation">
+  <button class="genre" ng-href='#gallery' ng-click="filterGenres('animation')">
       Animation
   </button>
-  <button class="genre" ng-click="predicate = biography">
+  <button class="genre" ng-href='#gallery' ng-click="filterGenres('biography')">
       Biography
   </button>
-  <button class="genre" ng-click="predicate = comedy">
+  <button class="genre" ng-href='#gallery' ng-click="filterGenres('comedy')">
       Comedy
   </button>
-  <button class="genre" ng-click="predicate = crime">
+  <button class="genre" ng-href='#gallery' ng-click="filterGenres('crime')">
       Crime
   </button>
-  <button class="genre" ng-click="predicate = drama"> 
+ <button class="genre" ng-href='#gallery' ng-click="filterGenres('drama')">
       Drama
   </button>
-  <button class="genre" ng-click="predicate = family">
+  <button class="genre" ng-href='#gallery' ng-click="filterGenres('family')">
       Family
   </button>
-  <button class="genre" ng-click="predicate = fantasy">
+  <button class="genre" ng-href='#gallery' ng-click="filterGenres('fantasy')">
       Fantasy
   </button>
-  <button class="genre" ng-click="predicate = film-noir">
+  <button class="genre" ng-href='#gallery' ng-click="filterGenres('film-noir')">
       Film-Noir
   </button>
-  <button class="genre" ng-click="predicate = history">
+  <button class="genre" ng-href='#gallery' ng-click="filterGenres('history')">
       History
   </button>
-  <button class="genre" ng-click="predicate = horro">
+  <button class="genre" ng-href='#gallery' ng-click="filterGenres('horror')">
       Horror
   </button>
-  <button class="genre" ng-click="predicate = music">
+  <button class="genre" ng-href='#gallery' ng-click="filterGenres('music')">
       Music
   </button>
-  <button class="genre" ng-click="predicate = musical">
+  <button class="genre" ng-href='#gallery' ng-click="filterGenres('musical')">
       Musical
   </button>
-  <button class="genre" ng-click="predicate = mystery">
+  <button class="genre" ng-href='#gallery' ng-click="filterGenres('mystery')">
       Mystery
   </button>
-  <button class="genre" ng-click="predicate = romance">
+  <button class="genre" ng-href='#gallery' ng-click="filterGenres('romance')">
       Romance
   </button>
-  <button class="genre" ng-click="predicate = sci-fi">
+  <button class="genre" ng-href='#gallery' ng-click="filterGenres('sci-fi')">
       Sci-Fi
   </button>
-  <button class="genre" ng-click="predicate = sport">
+  <button class="genre" ng-href='#gallery' ng-click="filterGenres('sport')">
       Sport
   </button>
-  <button class="genre" ng-click="predicate = thriller">
+  <button class="genre" ng-href='#gallery' ng-click="filterGenres('thriller')">
       Thriller
   </button>
-  <button class="genre" ng-click="predicate = war">
+  <button class="genre" ng-href='#gallery' ng-click="filterGenres('war')">
       War
   </button>
-  <button class="genre" ng-click="predicate = western">
+  <button class="genre" ng-href='#gallery' ng-click="filterGenres('western')">
       Western
   </button>
 
 	
 </div>
-<div> 
-	{{predicate}}
-</div>
 
 
 <div class="row small-up-1 medium-up-2 large-up-4">
-  <div class="column" ng-repeat="film in films | filter:genre:genreProp">
+  <div class="column" ng-repeat="film in films | filter:{genre:predicate} ">
   	<a href= "#details/{{film.rank}}">
     	<img ng-src="data/images/{{film.imdbID}}.jpg" class="thumbnail" alt=""/>
   	</a>

@@ -37,6 +37,13 @@ app.controller('galleryController', ['$scope',  '$http', function($scope, $http)
   }).
   error(function(err) {
   });
+
+  $scope.filterGenres = function(genreName)
+  {
+  	console.log(genreName);
+  	$scope.predicate = genreName;
+  }
+
 }]);
 
 app.controller('detailsController', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
