@@ -7,13 +7,13 @@
         <span class="offscreen">Next</span>  ▶
     </a>
 	</div>
-	<div>
+	<div class="detail-content">
 	  <img class="film-image" ng-src="data/images/{{film.imdbID}}.jpg"/>
-	  <p>Title: {{film.title}} </p>
-	  <p>Rank: {{film.rank}}</p>
-	  <p>Released: {{film.plot}}</p>
-	  <p>Released: {{film.released}}</p>
-	  <p>Released: {{film.awards}}</p>
+	  <h2 id="title">{{film.title}} </h2>
+	  <h4 id="rank">Rank: {{film.rank}}</h4>
+	  <p id="plot">Plot: {{film.plot}}</p>
+	  <p id="released">Released: {{film.released}}</p>
+	  <p id="awards">Awards: {{film.awards}}</p>
 	</div>
 </div>
 

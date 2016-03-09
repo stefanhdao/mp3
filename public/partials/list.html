@@ -23,7 +23,8 @@
         </form>
       </div>
     </div>
-    <div class="col-md-10">
+
+    <div class="list-content col-md-10">
       <!--Body content-->
 
       <ul class="list">
@@ -31,8 +32,8 @@
           <div class="film-container" >
             <a href= "#details/{{film.rank}}">
               <img class="film-image" ng-src="data/images/{{film.imdbID}}.jpg"/>
-              <p>Title: {{film.title}} </p>
-              <p>Rank: {{film.rank}}</p>
+              <p class="film-info">Title: {{film.title}} </p>
+              <p class="film-info">Rank: {{film.rank}}</p>
             </a>
           </div>
         </li>

@@ -4,13 +4,28 @@
 body {
   position: relative;
   width: 100%;
-  border: 1px solid red;
   display: block;
+}
+
+.film-container {
+	height: 200px;
+	display: float;
+}
+
+.film-image {
+	padding-top: 5px;
+	padding-left: 5px;
+	max-width: 100%;
+	max-height: 98%;
+	float: left;	
+}
+
+.film-info {
+	margin: 10px;
 }
 
 body > *  {
   margin: auto;
-  border: 1px solid blue;
   display: block;
   overflow: auto;
 }
@@ -24,12 +39,22 @@ form input {
 }
 
 .main {
+	background: #3D3537;
   text-align:center;
-  border: 1px solid green;
+  border: 1px solid black;
+  color: white;
+}
+
+.main h1 {
+	font-family: Impact, Charcoal, sans-serif;
 }
 
 .block {
     margin: 0 auto;
+}
+
+.sort {
+	margin-top: 2px;
 }
 
 .inner {
@@ -43,6 +68,34 @@ form input {
 	text-align: center;
 }
 
+.buttons {
+	text-align:center;
+}
+
+.detail-view {
+	background: #8BC5D9;
+	height: 500px;
+}
+
+#title, #rank {
+	color: red;
+}
+
+#plot, #released, #awards, #actors {
+	color: white;
+}
+
+
+.detail-content {
+	margin-top: 2px;
+	text-align:center;
+}
+
+.detail-content img{
+	max-height: 95%;
+	max-width: 95%;
+}
+
 .inner2{
 	width: 50%;
     margin: 0 auto;
@@ -52,6 +105,7 @@ form input {
 	display: float;
 	border: 1px solid;
 }
+
 
 /*
 .film-container:hover
@@ -67,10 +121,3 @@ form input {
 	list-style-type: none;
 }
 
-.film-image {
-	height: 100px;
-	width: 100px;
-	max-width: 100%;
-	max-height: 100%;
-	
-}
